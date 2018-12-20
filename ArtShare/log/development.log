@@ -1,0 +1,972 @@
+  [1m[35m (512.3ms)[0m  [1m[35mCREATE DATABASE "ArtShare_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (251.3ms)[0m  [1m[35mCREATE DATABASE "ArtShare_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+Started GET "/" for 127.0.0.1 at 2018-12-20 13:23:10 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/aa/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-5.2.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/aa/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-5.2.2/lib/rails/templates/rails/welcome/index.html.erb (47.0ms)
+Completed 200 OK in 143ms (Views: 81.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-12-20 13:30:39 -0500
+
+LoadError - Unable to autoload constant UsersController, expected /Users/aa/Desktop/W4D1_project/ArtShare/app/controllers/users_controller.rb to define it:
+
+Started GET "/users" for 127.0.0.1 at 2018-12-20 13:31:27 -0500
+
+LoadError - Unable to autoload constant UsersController, expected /Users/aa/Desktop/W4D1_project/ArtShare/app/controllers/users_controller.rb to define it:
+
+Started GET "/users" for 127.0.0.1 at 2018-12-20 13:31:54 -0500
+
+LoadError - Unable to autoload constant UsersController, expected /Users/aa/Desktop/W4D1_project/ArtShare/app/controllers/users_controller.rb to define it:
+
+Started GET "/users" for 127.0.0.1 at 2018-12-20 13:32:22 -0500
+
+LoadError - Unable to autoload constant UsersController, expected /Users/aa/Desktop/W4D1_project/ArtShare/app/controllers/users_controller.rb to define it:
+
+  [1m[35m (46.4ms)[0m  [1m[35mCREATE DATABASE "ArtShare_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE DATABASE "ArtShare_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+Started GET "/users" for 127.0.0.1 at 2018-12-20 13:34:21 -0500
+
+LoadError - Unable to autoload constant UsersController, expected /Users/aa/Desktop/W4D1_project/ArtShare/app/controllers/users_controller.rb to define it:
+
+Started GET "/users" for 127.0.0.1 at 2018-12-20 13:35:09 -0500
+Processing by UsersController#index as */*
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms)
+
+
+
+NameError - uninitialized constant UsersController::User:
+  app/controllers/users_controller.rb:3:in `index'
+
+Started GET "/users" for 127.0.0.1 at 2018-12-20 13:36:17 -0500
+Processing by UsersController#index as */*
+Completed 200 OK in 157ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-12-20 13:40:19 -0500
+
+ActiveRecord::PendingMigrationError - Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+:
+
+  [1m[35m (1035.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (59.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6770978919105658740)[0m
+  ↳ bin/rails:9
+  [1m[35m (13.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateUsers (20181220183906)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (53.8ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "name" character varying NOT NULL, "age" character varying NOT NULL)[0m
+  ↳ db/migrate/20181220183906_create_users.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181220183906"]]
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-12-20 18:41:34.129185"], ["updated_at", "2018-12-20 18:41:34.129185"]]
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(6770978919105658740)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mUser Create (4.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "age") VALUES ($1, $2) RETURNING "id"[0m  [["name", "Muhammed"], ["age", "26"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "age") VALUES ($1, $2) RETURNING "id"[0m  [["name", "Imtiyaz"], ["age", "26"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+Started GET "/users" for 127.0.0.1 at 2018-12-20 13:43:24 -0500
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/aa/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#index as */*
+No template found for UsersController#index, rendering head :no_content
+Completed 204 No Content in 80ms (ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/aa/.rbenv/versions/2.5.1/bin/annotate:23
+Started GET "/users" for 127.0.0.1 at 2018-12-20 13:44:12 -0500
+Processing by UsersController#index as */*
+Completed 200 OK in 5ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("name", "age") VALUES ($1, $2) RETURNING "id"[0m  [["name", "Muhammed"], ["age", "26"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (16.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "age") VALUES ($1, $2) RETURNING "id"[0m  [["name", "Imtiyaz"], ["age", "26"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+Started GET "/users" for 127.0.0.1 at 2018-12-20 13:44:56 -0500
+Processing by UsersController#index as */*
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-12-20 13:45:40 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4
+Completed 200 OK in 114ms (Views: 64.3ms | ActiveRecord: 8.4ms)
+
+
+Started GET "/users?name=Ishtiaque&age=20" for 127.0.0.1 at 2018-12-20 13:49:58 -0500
+Processing by UsersController#index as */*
+  Parameters: {"name"=>"Ishtiaque", "age"=>"20"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users?name=Imtiyaz&age=26" for 127.0.0.1 at 2018-12-20 13:50:34 -0500
+Processing by UsersController#index as */*
+  Parameters: {"name"=>"Imtiyaz", "age"=>"26"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users?name=Imtiyaz&age=26" for 127.0.0.1 at 2018-12-20 13:51:36 -0500
+Processing by UsersController#index as */*
+  Parameters: {"name"=>"Imtiyaz", "age "=>"27", "age"=>"26"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-12-20 13:52:17 -0500
+
+AbstractController::ActionNotFound - The action 'create' could not be found for UsersController:
+
+Started POST "/users" for 127.0.0.1 at 2018-12-20 13:52:59 -0500
+
+AbstractController::ActionNotFound - The action 'create' could not be found for UsersController:
+
+Started POST "/users" for 127.0.0.1 at 2018-12-20 13:53:44 -0500
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"Imtiyaz", "age "=>"27"}
+No template found for UsersController#create, rendering head :no_content
+Completed 204 No Content in 78ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-12-20 13:54:48 -0500
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"Imtiyaz", "age "=>"27"}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2018-12-20 13:56:42 -0500
+
+AbstractController::ActionNotFound - The action 'show' could not be found for UsersController:
+
+Started GET "/users/2" for 127.0.0.1 at 2018-12-20 13:56:58 -0500
+Processing by UsersController#show as */*
+  Parameters: {"name"=>"Imtiyaz", "age "=>"27", "id"=>"2"}
+No template found for UsersController#show, rendering head :no_content
+Completed 204 No Content in 75ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2018-12-20 13:57:43 -0500
+Processing by UsersController#show as */*
+  Parameters: {"name"=>"Imtiyaz", "age "=>"27", "id"=>"2"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:12
+Completed 200 OK in 117ms (Views: 0.4ms | ActiveRecord: 8.6ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2018-12-20 13:58:35 -0500
+Processing by UsersController#show as */*
+  Parameters: {"name"=>"Imtiyaz", "age "=>"27", "id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:12
+Completed 200 OK in 50ms (Views: 0.2ms | ActiveRecord: 7.1ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2018-12-20 14:01:00 -0500
+Processing by UsersController#show as */*
+  Parameters: {"user"=>{"name"=>"Imtiyaz", "age"=>"27"}, "ahhhhh"=>"Nooooooo", "id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:12
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/users/2" for 127.0.0.1 at 2018-12-20 14:01:53 -0500
+  
+ActionController::RoutingError (No route matches [POST] "/users/2"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started POST "/users" for 127.0.0.1 at 2018-12-20 14:03:14 -0500
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"name"=>"Imtiyaz", "age"=>"27"}, "ahhhhh"=>"Nooooooo"}
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-12-20 14:04:26 -0500
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"name"=>"Imtiyaz", "age"=>"27"}, "some_inner_hash"=>{"hello"=>"hola"}, "ahhhhh"=>"Nooooooo"}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-12-20 14:04:52 -0500
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"name"=>"Imtiyaz", "age"=>"27", "some_inner_hash"=>{"hello"=>"hola"}}, "ahhhhh"=>"Nooooooo"}
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6770978919105658740)[0m
+  ↳ bin/rails:9
+  [1m[35m (26.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to AddEmailToUsers (20181220191044)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(6770978919105658740)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6770978919105658740)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to AddEmailToUsers (20181220191044)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (155.8ms)[0m  [1m[35mALTER TABLE "users" ADD "email" character varying NOT NULL[0m
+  ↳ db/migrate/20181220191044_add_email_to_users.rb:3
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(6770978919105658740)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6770978919105658740)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to AddEmailToUsers (20181220191044)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (18.2ms)[0m  [1m[35mALTER TABLE "users" ADD "email" character varying NOT NULL[0m
+  ↳ db/migrate/20181220191044_add_email_to_users.rb:3
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(6770978919105658740)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6770978919105658740)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to AddEmailToUsers (20181220191044)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (184.9ms)[0m  [1m[35mDROP TABLE "users"[0m
+  ↳ db/migrate/20181220191044_add_email_to_users.rb:3
+  [1m[35m (45.1ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "name" character varying NOT NULL, "email" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20181220191044_add_email_to_users.rb:4
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181220191044"]]
+  ↳ bin/rails:9
+  [1m[35m (54.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(6770978919105658740)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mUser Load (45.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (25.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Muhammed"], ["email", "m@gmail.com"], ["created_at", "2018-12-20 19:22:28.782729"], ["updated_at", "2018-12-20 19:22:28.782729"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Imtiyaz"], ["email", "my@gmail.com"], ["created_at", "2018-12-20 19:22:53.350229"], ["updated_at", "2018-12-20 19:22:53.350229"]]
+  [1m[35m (2.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Started GET "/users" for 127.0.0.1 at 2018-12-20 14:23:43 -0500
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/aa/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4
+Completed 200 OK in 133ms (Views: 57.6ms | ActiveRecord: 8.1ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2018-12-20 14:23:55 -0500
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:12
+Completed 200 OK in 13ms (Views: 0.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2018-12-20 14:24:41 -0500
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:12
+Completed 200 OK in 43ms (Views: 0.5ms | ActiveRecord: 7.8ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-12-20 14:28:12 -0500
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"name"=>"Ishti", "email"=>"20"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:9
+Completed 422 Unprocessable Entity in 268ms (Views: 0.2ms | ActiveRecord: 7.3ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-12-20 14:28:43 -0500
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"name"=>"Ishti", "email"=>"20"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:9
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Ishti"], ["email", "20"], ["created_at", "2018-12-20 19:28:43.375873"], ["updated_at", "2018-12-20 19:28:43.375873"]]
+  ↳ app/controllers/users_controller.rb:9
+  [1m[35m (16.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:9
+Completed 200 OK in 72ms (Views: 0.5ms | ActiveRecord: 23.7ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-12-20 14:28:53 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-12-20 14:30:06 -0500
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"name"=>"Ishtiaque", "email"=>"21"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:9
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Ishtiaque"], ["email", "21"], ["created_at", "2018-12-20 19:30:07.466894"], ["updated_at", "2018-12-20 19:30:07.466894"]]
+  ↳ app/controllers/users_controller.rb:9
+  [1m[35m (52.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:9
+Completed 200 OK in 236ms (Views: 0.5ms | ActiveRecord: 58.7ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-12-20 14:30:16 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4
+Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-12-20 14:31:08 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4
+Completed 200 OK in 35ms (Views: 7.8ms | ActiveRecord: 8.7ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-12-20 14:31:33 -0500
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"name"=>"Iftikar", "email"=>"19"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:9
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Iftikar"], ["email", "19"], ["created_at", "2018-12-20 19:31:33.634333"], ["updated_at", "2018-12-20 19:31:33.634333"]]
+  ↳ app/controllers/users_controller.rb:9
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:9
+Completed 200 OK in 5ms (Views: 0.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-12-20 14:31:44 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/5" for 127.0.0.1 at 2018-12-20 14:31:59 -0500
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17
+Completed 200 OK in 4ms (Views: 0.8ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-12-20 14:32:56 -0500
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"name"=>"Heena"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:9
+Completed 422 Unprocessable Entity in 44ms (Views: 0.2ms | ActiveRecord: 6.9ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-12-20 14:37:20 -0500
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"name"=>"Heena", "email"=>"hc@gmail.com"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:9
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Heena"], ["email", "hc@gmail.com"], ["created_at", "2018-12-20 19:37:20.618671"], ["updated_at", "2018-12-20 19:37:20.618671"]]
+  ↳ app/controllers/users_controller.rb:9
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:9
+Completed 200 OK in 84ms (Views: 0.4ms | ActiveRecord: 8.3ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-12-20 14:38:03 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4
+Completed 200 OK in 5ms (Views: 3.1ms | ActiveRecord: 0.6ms)
+
+
+Started PATCH "/users/3" for 127.0.0.1 at 2018-12-20 14:38:42 -0500
+Processing by UsersController#update as */*
+  Parameters: {"user"=>{"email"=>"ish@gmail.com"}, "id"=>"3"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:22
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:23
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "email" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["email", "ish@gmail.com"], ["updated_at", "2018-12-20 19:38:42.122872"], ["id", 3]]
+  ↳ app/controllers/users_controller.rb:23
+  [1m[35m (23.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:23
+Completed 200 OK in 31ms (Views: 0.4ms | ActiveRecord: 25.2ms)
+
+
+Started PATCH "/users/4" for 127.0.0.1 at 2018-12-20 14:38:57 -0500
+Processing by UsersController#update as */*
+  Parameters: {"user"=>{"email"=>"ishtiaque@gmail.com"}, "id"=>"4"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:22
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:23
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "email" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["email", "ishtiaque@gmail.com"], ["updated_at", "2018-12-20 19:38:57.260683"], ["id", 4]]
+  ↳ app/controllers/users_controller.rb:23
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:23
+Completed 200 OK in 6ms (Views: 0.4ms | ActiveRecord: 1.8ms)
+
+
+Started PATCH "/users/5" for 127.0.0.1 at 2018-12-20 14:39:10 -0500
+Processing by UsersController#update as */*
+  Parameters: {"user"=>{"email"=>"if@gmail.com"}, "id"=>"5"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:22
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:23
+  [1m[36mUser Update (0.7ms)[0m  [1m[33mUPDATE "users" SET "email" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["email", "if@gmail.com"], ["updated_at", "2018-12-20 19:39:10.822047"], ["id", 5]]
+  ↳ app/controllers/users_controller.rb:23
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:23
+Completed 200 OK in 6ms (Views: 0.5ms | ActiveRecord: 1.8ms)
+
+
+Started DELETE "/users/6" for 127.0.0.1 at 2018-12-20 14:39:26 -0500
+Processing by UsersController#destroy as */*
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:28
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:29
+  [1m[36mUser Destroy (0.6ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 6]]
+  ↳ app/controllers/users_controller.rb:29
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:29
+Completed 200 OK in 6ms (Views: 0.7ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-12-20 14:39:33 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.6ms)
+
+
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6770978919105658740)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to UpdateUsers (20181220194219)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (66.9ms)[0m  [1m[35mALTER TABLE "users" DROP COLUMN "name"[0m
+  ↳ db/migrate/20181220194219_update_users.rb:3
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "users" DROP COLUMN "email"[0m
+  ↳ db/migrate/20181220194219_update_users.rb:4
+  [1m[35m (24.9ms)[0m  [1m[35mALTER TABLE "users" ADD "username" character varying NOT NULL[0m
+  ↳ db/migrate/20181220194219_update_users.rb:5
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(6770978919105658740)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6770978919105658740)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to UpdateUsers (20181220194219)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (2.4ms)[0m  [1m[35mDROP TABLE "users"[0m
+  ↳ db/migrate/20181220194219_update_users.rb:3
+  [1m[35m (107.7ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20181220194219_update_users.rb:4
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_username" ON "users"  ("username")[0m
+  ↳ db/migrate/20181220194219_update_users.rb:9
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181220194219"]]
+  ↳ bin/rails:9
+  [1m[35m (28.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(6770978919105658740)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6770978919105658740)[0m
+  ↳ bin/rails:9
+  [1m[35m (26.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateArtworks (20181220195023)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (87.8ms)[0m  [1m[35mCREATE TABLE "artworks" ("id" bigserial primary key, "title" character varying NOT NULL, "image_url" character varying NOT NULL, "artist_id" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20181220195023_create_artworks.rb:3
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_artworks_on_artist_id_and_title" ON "artworks"  ("artist_id", "title")[0m
+  ↳ db/migrate/20181220195023_create_artworks.rb:10
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181220195023"]]
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(6770978919105658740)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (29.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/aa/.rbenv/versions/2.5.1/bin/annotate:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6770978919105658740)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateArtShares (20181220200434)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (102.2ms)[0m  [1m[35mCREATE TABLE "art_shares" ("id" bigserial primary key, "artwork_id" integer NOT NULL, "viewer_id" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20181220200434_create_art_shares.rb:3
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_art_shares_on_viewer_id_and_artwork_id" ON "art_shares"  ("viewer_id", "artwork_id")[0m
+  ↳ db/migrate/20181220200434_create_art_shares.rb:10
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181220200434"]]
+  ↳ bin/rails:9
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(6770978919105658740)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (22.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mUser Load (102.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:9
+  [1m[36mArtwork Load (18.5ms)[0m  [1m[34mSELECT "artworks".* FROM "artworks"[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:9
+  [1m[36mArtwork Load (0.7ms)[0m  [1m[34mSELECT "artworks".* FROM "artworks"[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:9
+  [1m[36mArtwork Load (0.7ms)[0m  [1m[34mSELECT "artworks".* FROM "artworks"[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6770978919105658740)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to ChangeArtShareTableName (20181220203442)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (57.6ms)[0m  [1m[35mALTER TABLE "art_shares" RENAME TO "artwork_shares"[0m
+  ↳ db/migrate/20181220203442_change_art_share_table_name.rb:3
+  [1m[35m (26.5ms)[0m  [1m[35mALTER INDEX "art_shares_pkey" RENAME TO "artwork_shares_pkey"[0m
+  ↳ db/migrate/20181220203442_change_art_share_table_name.rb:3
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "public"."art_shares_id_seq" RENAME TO "artwork_shares_id_seq"[0m
+  ↳ db/migrate/20181220203442_change_art_share_table_name.rb:3
+  [1m[35m (0.4ms)[0m  [1m[35mALTER INDEX "index_art_shares_on_viewer_id_and_artwork_id" RENAME TO "index_artwork_shares_on_viewer_id_and_artwork_id"[0m
+  ↳ db/migrate/20181220203442_change_art_share_table_name.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181220203442"]]
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(6770978919105658740)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:9
+  [1m[36mArtwork Load (0.7ms)[0m  [1m[34mSELECT "artworks".* FROM "artworks"[0m
+  ↳ db/seeds.rb:10
+  [1m[36mArtworkShare Load (18.9ms)[0m  [1m[34mSELECT "artwork_shares".* FROM "artwork_shares"[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "robert"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:15
+  [1m[36mUser Create (29.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["username", "robert"], ["created_at", "2018-12-20 20:37:36.475935"], ["updated_at", "2018-12-20 20:37:36.475935"]]
+  ↳ db/seeds.rb:15
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:16
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "bill"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:16
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["username", "bill"], ["created_at", "2018-12-20 20:37:36.509424"], ["updated_at", "2018-12-20 20:37:36.509424"]]
+  ↳ db/seeds.rb:16
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:17
+  [1m[36mArtwork Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "artworks" WHERE "artworks"."image_url" = $1 LIMIT $2[0m  [["image_url", "google.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:17
+  [1m[36mArtwork Exists (16.8ms)[0m  [1m[34mSELECT  1 AS one FROM "artworks" WHERE "artworks"."title" = $1 AND "artworks"."artist_id" = $2 LIMIT $3[0m  [["title", "nighthawks"], ["artist_id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:17
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:17
+  [1m[36mArtwork Create (0.7ms)[0m  [1m[32mINSERT INTO "artworks" ("title", "image_url", "artist_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "nighthawks"], ["image_url", "google.com"], ["artist_id", 1], ["created_at", "2018-12-20 20:37:36.616104"], ["updated_at", "2018-12-20 20:37:36.616104"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mArtwork Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "artworks" WHERE "artworks"."image_url" = $1 LIMIT $2[0m  [["image_url", "google1.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:18
+  [1m[36mArtwork Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "artworks" WHERE "artworks"."title" = $1 AND "artworks"."artist_id" = $2 LIMIT $3[0m  [["title", "mona lisa"], ["artist_id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:18
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:18
+  [1m[36mArtwork Create (0.4ms)[0m  [1m[32mINSERT INTO "artworks" ("title", "image_url", "artist_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "mona lisa"], ["image_url", "google1.com"], ["artist_id", 2], ["created_at", "2018-12-20 20:37:36.622384"], ["updated_at", "2018-12-20 20:37:36.622384"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mArtworkShare Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "artwork_shares" WHERE "artwork_shares"."artwork_id" = $1 AND "artwork_shares"."viewer_id" = $2 LIMIT $3[0m  [["artwork_id", 1], ["viewer_id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[36mArtwork Load (0.3ms)[0m  [1m[34mSELECT  "artworks".* FROM "artworks" WHERE "artworks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[36mArtworkShare Create (0.7ms)[0m  [1m[32mINSERT INTO "artwork_shares" ("artwork_id", "viewer_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["artwork_id", 1], ["viewer_id", 2], ["created_at", "2018-12-20 20:37:36.647734"], ["updated_at", "2018-12-20 20:37:36.647734"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:20
+  [1m[36mArtworkShare Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "artwork_shares" WHERE "artwork_shares"."artwork_id" = $1 AND "artwork_shares"."viewer_id" = $2 LIMIT $3[0m  [["artwork_id", 2], ["viewer_id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:20
+  [1m[36mArtwork Load (0.3ms)[0m  [1m[34mSELECT  "artworks".* FROM "artworks" WHERE "artworks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:20
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:20
+  [1m[36mArtworkShare Create (0.4ms)[0m  [1m[32mINSERT INTO "artwork_shares" ("artwork_id", "viewer_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["artwork_id", 2], ["viewer_id", 2], ["created_at", "2018-12-20 20:37:36.653693"], ["updated_at", "2018-12-20 20:37:36.653693"]]
+  ↳ db/seeds.rb:20
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:20
+Started POST "/users" for 127.0.0.1 at 2018-12-20 15:39:38 -0500
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/aa/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"username"=>"Heena"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:9
+  [1m[36mUser Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Heena"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["username", "Heena"], ["created_at", "2018-12-20 20:39:39.259889"], ["updated_at", "2018-12-20 20:39:39.259889"]]
+  ↳ app/controllers/users_controller.rb:9
+  [1m[35m (12.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:9
+Completed 200 OK in 70ms (Views: 0.9ms | ActiveRecord: 23.3ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-12-20 15:40:11 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/artworks" for 127.0.0.1 at 2018-12-20 16:07:13 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/artworks"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/artworks" for 127.0.0.1 at 2018-12-20 16:11:13 -0500
+Processing by ArtworksController#index as */*
+  [1m[36mArtwork Load (15.9ms)[0m  [1m[34mSELECT "artworks".* FROM "artworks"[0m
+  ↳ app/controllers/artworks_controller.rb:5
+Completed 200 OK in 141ms (Views: 11.1ms | ActiveRecord: 42.8ms)
+
+
+Started POST "/users?username=Van+Gogh" for 127.0.0.1 at 2018-12-20 16:14:16 -0500
+
+SyntaxError - syntax error, unexpected end-of-input, expecting keyword_end:
+  app/controllers/users_controller.rb:40:in `'
+
+Started POST "/users?username=Van+Gogh" for 127.0.0.1 at 2018-12-20 16:15:08 -0500
+Processing by UsersController#create as */*
+  Parameters: {"artwork"=>{"title"=>"The Starry Night", "image_url"=>"https://en.wikipedia.org/wiki/The_Starry_Night#/media/File:Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg", "artist_id"=>""}, "username"=>"Van Gogh"}
+Completed 400 Bad Request in 63ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::ParameterMissing - param is missing or the value is empty: user:
+  app/controllers/users_controller.rb:39:in `user_params'
+  app/controllers/users_controller.rb:8:in `create'
+
+Started POST "/users?username=Van+Gogh" for 127.0.0.1 at 2018-12-20 16:15:32 -0500
+Processing by UsersController#create as */*
+  Parameters: {"username"=>"Van Gogh"}
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::ParameterMissing - param is missing or the value is empty: user:
+  app/controllers/users_controller.rb:39:in `user_params'
+  app/controllers/users_controller.rb:8:in `create'
+
+Started POST "/users?user[username]=Van+Gogh" for 127.0.0.1 at 2018-12-20 16:15:48 -0500
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"username"=>"Van Gogh"}}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:9
+  [1m[36mUser Exists (2.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Van Gogh"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9
+  [1m[36mUser Create (36.8ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["username", "Van Gogh"], ["created_at", "2018-12-20 21:15:48.173794"], ["updated_at", "2018-12-20 21:15:48.173794"]]
+  ↳ app/controllers/users_controller.rb:9
+  [1m[35m (8.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:9
+Completed 200 OK in 74ms (Views: 0.6ms | ActiveRecord: 58.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-12-20 16:16:00 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4
+Completed 200 OK in 5ms (Views: 3.1ms | ActiveRecord: 1.8ms)
+
+
+Started POST "/artworks" for 127.0.0.1 at 2018-12-20 16:16:20 -0500
+Processing by ArtworksController#create as */*
+  Parameters: {"artwork"=>{"title"=>"The Starry Night", "image_url"=>"https://en.wikipedia.org/wiki/The_Starry_Night#/media/File:Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg", "artist_id"=>"4"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/artworks_controller.rb:10
+  [1m[36mArtwork Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "artworks" WHERE "artworks"."image_url" = $1 LIMIT $2[0m  [["image_url", "https://en.wikipedia.org/wiki/The_Starry_Night#/media/File:Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg"], ["LIMIT", 1]]
+  ↳ app/controllers/artworks_controller.rb:10
+  [1m[36mArtwork Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "artworks" WHERE "artworks"."title" = $1 AND "artworks"."artist_id" = $2 LIMIT $3[0m  [["title", "The Starry Night"], ["artist_id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/artworks_controller.rb:10
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/artworks_controller.rb:10
+  [1m[36mArtwork Create (0.7ms)[0m  [1m[32mINSERT INTO "artworks" ("title", "image_url", "artist_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "The Starry Night"], ["image_url", "https://en.wikipedia.org/wiki/The_Starry_Night#/media/File:Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg"], ["artist_id", 4], ["created_at", "2018-12-20 21:16:20.489161"], ["updated_at", "2018-12-20 21:16:20.489161"]]
+  ↳ app/controllers/artworks_controller.rb:10
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/artworks_controller.rb:10
+Completed 200 OK in 99ms (Views: 0.4ms | ActiveRecord: 8.9ms)
+
+
+Started GET "/artworks" for 127.0.0.1 at 2018-12-20 16:16:32 -0500
+Processing by ArtworksController#index as */*
+  [1m[36mArtwork Load (0.4ms)[0m  [1m[34mSELECT "artworks".* FROM "artworks"[0m
+  ↳ app/controllers/artworks_controller.rb:5
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/artworks/1" for 127.0.0.1 at 2018-12-20 16:17:41 -0500
+Processing by ArtworksController#update as */*
+  Parameters: {"artwork"=>{"image_url"=>"https://www.artic.edu/artworks/111628/nighthawks"}, "id"=>"1"}
+  [1m[36mArtwork Load (0.6ms)[0m  [1m[34mSELECT  "artworks".* FROM "artworks" WHERE "artworks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/artworks_controller.rb:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/artworks_controller.rb:24
+  [1m[36mArtwork Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "artworks" WHERE "artworks"."image_url" = $1 AND "artworks"."id" != $2 LIMIT $3[0m  [["image_url", "https://www.artic.edu/artworks/111628/nighthawks"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/artworks_controller.rb:24
+  [1m[36mArtwork Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "artworks" WHERE "artworks"."title" = $1 AND "artworks"."id" != $2 AND "artworks"."artist_id" = $3 LIMIT $4[0m  [["title", "nighthawks"], ["id", 1], ["artist_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/artworks_controller.rb:24
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/artworks_controller.rb:24
+  [1m[36mArtwork Update (0.6ms)[0m  [1m[33mUPDATE "artworks" SET "image_url" = $1, "updated_at" = $2 WHERE "artworks"."id" = $3[0m  [["image_url", "https://www.artic.edu/artworks/111628/nighthawks"], ["updated_at", "2018-12-20 21:17:41.411559"], ["id", 1]]
+  ↳ app/controllers/artworks_controller.rb:24
+  [1m[35m (30.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/artworks_controller.rb:24
+Completed 200 OK in 61ms (Views: 1.7ms | ActiveRecord: 34.0ms)
+
+
+Started GET "/artworks/1" for 127.0.0.1 at 2018-12-20 16:17:50 -0500
+Processing by ArtworksController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mArtwork Load (0.8ms)[0m  [1m[34mSELECT  "artworks".* FROM "artworks" WHERE "artworks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/artworks_controller.rb:18
+Completed 200 OK in 6ms (Views: 1.7ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/artwork_shares" for 127.0.0.1 at 2018-12-20 16:38:02 -0500
+
+SyntaxError - syntax error, unexpected keyword_else
+    else
+    ^~~~:
+  app/controllers/artwork_shares_controller.rb:7:in `'
+
+Started POST "/artwork_shares" for 127.0.0.1 at 2018-12-20 16:38:25 -0500
+Processing by ArtworkSharesController#create as */*
+  Parameters: {"artwork_share"=>{"artwork_id"=>"1", "viewer_id"=>"2"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/artwork_shares_controller.rb:5
+  [1m[36mArtworkShare Exists (15.6ms)[0m  [1m[34mSELECT  1 AS one FROM "artwork_shares" WHERE "artwork_shares"."artwork_id" = $1 AND "artwork_shares"."viewer_id" = $2 LIMIT $3[0m  [["artwork_id", 1], ["viewer_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/artwork_shares_controller.rb:5
+  [1m[36mArtwork Load (0.8ms)[0m  [1m[34mSELECT  "artworks".* FROM "artworks" WHERE "artworks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/artwork_shares_controller.rb:5
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/artwork_shares_controller.rb:5
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/artwork_shares_controller.rb:5
+Completed 422 Unprocessable Entity in 161ms (Views: 0.5ms | ActiveRecord: 42.3ms)
+
+
